@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@sendgrid/mail": "^7.4.0",
+    "mongoose": "^5.10.19",
     "swa-api": "git+https://github.com/anthonychu/swa-api.git#0.1.0"
   },
   "devDependencies": {},
