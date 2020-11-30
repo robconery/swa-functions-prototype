@@ -31,7 +31,33 @@ module.exports = database.config({
             //         restrictDocsByUser: true
             //     }
             // ],
-            notifyOnChange: true
+            notifyOnChange: true,
+            validate(data){
+                //called before changes?
+            },
+            schema : {
+                //getting into ORM territory here but ... why not? Keep things simpler?
+                subject: {
+                    type: String,
+                    required: true
+                },
+                user: {
+                    id: {
+                        type: Number,
+                        required: true
+                    },
+                    email : {
+                        type: "Email",
+                        required: true
+                    }
+
+                },
+                created:{
+                    type: "Timestamp",
+                    required: true,
+                    default: new Date().getTime()
+                }
+            }
         }
     }
 });
